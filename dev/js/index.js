@@ -1,5 +1,16 @@
-import "babel-polyfill";
-import React from "react";
-import { render } from "react-dom";
+import 'babel-polyfill';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import allReducers from './reducers';
+import App from './components/App';
 
-render(<h1>Hey Now</h1>, document.getElementById("root"));
+const store = createStore(allReducers);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
