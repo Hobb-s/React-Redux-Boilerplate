@@ -1,5 +1,6 @@
 import React from 'react';
 import UserList from '../containers/User-List';
+import UserDetail from '../containers/User-Detail';
 require('../../scss/style.scss');
 
 const App = () => (
@@ -8,6 +9,7 @@ const App = () => (
     <UserList />
     <hr />
     <h2>User Details:</h2>
+    <UserDetail />
   </div>
 );
 
